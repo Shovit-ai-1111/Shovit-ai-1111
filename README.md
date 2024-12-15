@@ -1,9 +1,14 @@
-- 👋 Hi, I’m @Shovit-ai-1111
-- 👀 I’m interested in progammming.
-- 🌱 I’m currently learning Artificial Intelligence and Website design.
-- 📫 How to reach me via msg
+text = 'Hello Zaira'
+shift = 3
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+encrypted_text = ''
 
-<!---
-Shovit-ai-1111/Shovit-ai-1111 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+for char in text.lower():
+    if char == ' ':
+        encrypted_text += char
+    else:
+        index = alphabet.find(char)
+        new_index = (index + shift) % len(alphabet)
+        encrypted_text += alphabet[new_index]
+    
+print('encrypted text:', encrypted_text)
